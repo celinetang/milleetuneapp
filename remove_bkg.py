@@ -28,5 +28,5 @@ for nom_fichier in os.listdir(dossier_images):
             sortie_fichier.write(image_sans_arriere_plan)
 
 
-print("coucou")
+print("c'est bon, j'ai enleve les fonds de ces images.")
        
