@@ -1,0 +1,17 @@
+fastapi 
+uvicorn[standard]
+pydantic 
+typing 
+pandas 
+gunicorn 
+openpyxl 
+mlflow 
+boto3 
+scikit-learn
+python-multipart
+tensorflow
+Pillow
+os
+tensorflow
+logging
+traceback
