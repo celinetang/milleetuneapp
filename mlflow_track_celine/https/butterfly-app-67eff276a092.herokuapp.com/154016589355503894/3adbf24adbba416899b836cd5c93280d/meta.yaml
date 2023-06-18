@@ -1,0 +1,15 @@
+artifact_uri: /home/app/ https:/butterfly-app-67eff276a092.herokuapp.com/154016589355503894/3adbf24adbba416899b836cd5c93280d/artifacts
+end_time: 1687080351761
+entry_point_name: ''
+experiment_id: '154016589355503894'
+lifecycle_stage: active
+run_id: 3adbf24adbba416899b836cd5c93280d
+run_name: clean-donkey-981
+run_uuid: 3adbf24adbba416899b836cd5c93280d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687080335926
+status: 3
+tags: []
+user_id: root

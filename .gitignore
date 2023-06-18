@@ -1,5 +1,7 @@
 #model h5 trop lourds
 *.h5
+#mes credentiales
+notes.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

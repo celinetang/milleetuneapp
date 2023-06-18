@@ -1,0 +1,3 @@
+{
+  "LogisticRegression_score_unknown_dataset": "LogisticRegression.score(X=<ndarray>, y=<ndarray>)"
+}
