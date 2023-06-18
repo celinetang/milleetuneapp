@@ -22,5 +22,5 @@ ENV ARTIFACT_STORE_URI=$s3://insects-s3
 
 CMD mlflow server -p $PORT \
     --host 0.0.0.0 \
-    --backend-store-uri $postgresql://wujqcbshepvvkl:99166ded0f9c7ebf673e3f52dddd5b14422fd00717b115eff49c7ca5cf5c0af0@ec2-34-193-110-25.compute-1.amazonaws.com:5432/dbebk0buu8lf4q \
+    --backend-store-uri your-back-end-store \
     --default-artifact-root $s3://insects-s3
