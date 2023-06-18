@@ -1,3 +1,0 @@
-docker run -it -p 4000:4000 -v "$(pwd):/home/app" -e PORT=4000 -e AWS_ACCESS_KEY_ID=AKIAW7KCYLHO7SQO6XG3 -e AWS_SECRET_ACCESS_KEY=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 -e BACKEND_STORE_URI=postgresql://ptpdhzwqarhcez:b1abbb1b5b6e72b92bd60d8a29b4251b3547f9e52353f6d4b5f760d2886e93cc@ec2-44-213-228-107.compute-1.amazonaws.com:5432/d2uk4ian73pgn5 -e ARTIFACT_STORE_URI=s3://butterfly-s3-bucket/ mlflow-server-ct 
-
-docker run -it -p 4000:4000 -v "$(pwd):/home/app" -e AWS_ACCESS_KEY_ID=AKIAW7KCYLHO7SQO6XG3 -e AWS_SECRET_ACCESS_KEY=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 -e APP_URI="https://butterfly-app-67eff276a092.herokuapp.com/" mlflow-server-ct python train.py
