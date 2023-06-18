@@ -3,14 +3,14 @@ import pandas as pd
 from pydantic import BaseModel
 from typing import Literal, List, Union
 from fastapi import FastAPI, File, UploadFile
-import joblib
-import tensorflow as tf
-import mlflow
-import os
-from PIL import Image
-import numpy as np
+# import joblib
+# import tensorflow as tf
+# import mlflow
+# import os
+# from PIL import Image
+# import numpy as np
 
-logged_model = 'runs:/e0130093eadd49789c76e7b9b2b7cd39/model'
+
 
 ### 
 # Here you can define some configurations 
@@ -22,17 +22,18 @@ app = FastAPI()
 async def index():
     return "hello"
 
+"""
 @app.post("/upload", tags=["Upload_file"])
 async def create_upload_file(file: UploadFile = File(...)):
-    return {"filename": file.filename}
+  return {"filename": file.filename}
 
+ 
 
-
-
+logged_model = 'runs:/e0130093eadd49789c76e7b9b2b7cd39/model'
 @app.post("/predict", tags=["Machine Learning"])
 async def predict(file : UploadFile = File(...)):
     """
-    Prediction of butterfly category
+    #Prediction of butterfly category
     """
     # Read data 
     input_photo = Image.open(file.file)
@@ -47,7 +48,7 @@ async def predict(file : UploadFile = File(...)):
     response = {"prediction": prediction.tolist()[0]}
     return response
 
-
+"""
 
 
 if __name__=="__main__":
