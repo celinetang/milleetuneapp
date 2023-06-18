@@ -61,15 +61,28 @@ st.markdown("""
 
 if __name__ == '__main__':
     # GETTING PHOTOS AND TEXT AS INPUTS
+    st.markdown("##### Let's test link to FastApi !")
+    api_hello = "https://fastapi-celine-74c82ec6002a.herokuapp.com/hello"
+    
+    if st.button("click to obtain hello") :
+        response_hello = requests.get(api_hello)
+
+        if response_hello.status_code == 200:
+            result_hello = response_hello.json()
+             # Do something with the predictions
+            st.write(result_hello)
+        else:
+            st.error("Failed to say hello to the API.")
+
     st.markdown("##### Let's BUG it !")
     img_file = photos_uploader()
     submit_photos = st.button("Submit photos")
     if submit_photos and img_file is not None:
         st.session_state = np.array([st.session_state])
         # Send the image to the API
-        api_endpoint = "https://insects-api.herokuapp.com/predict"  # Replace with your API endpoint
-        files = {"file": img_file}
-        response = requests.post(api_endpoint, files=files)
+        api_endpoint = "https://fastapi-celine-74c82ec6002a.herokuapp.com/predict"  # Replace with your API endpoint
+        file = {"file": img_file}
+        response = requests.post(api_endpoint, files=file)
 
         # Process the API response
         if response.status_code == 200:
