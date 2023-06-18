@@ -18,9 +18,9 @@ RUN pip install -r /dependencies/requirements.txt
 ENV AWS_ACCESS_KEY_ID=your-private-secret-key
 ENV AWS_SECRET_ACCESS_KEY=your-private-secret-key
 ENV BACKEND_STORE_URI=our-private-secret-key
-ENV ARTIFACT_STORE_URI=$s3://insects-s3
+ENV ARTIFACT_STORE_URI=your-own-store
 
 CMD mlflow server -p $PORT \
     --host 0.0.0.0 \
     --backend-store-uri your-back-end-store \
-    --default-artifact-root $s3://insects-s3
+    --default-artifact-root your-own-store
