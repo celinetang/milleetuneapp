@@ -2,6 +2,7 @@
 *.h5
 #mes credentiales
 notes.txt
+run.sh
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
