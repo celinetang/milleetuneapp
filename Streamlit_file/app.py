@@ -62,7 +62,7 @@ st.markdown("""
 if __name__ == '__main__':
     # GETTING PHOTOS AND TEXT AS INPUTS
     st.markdown("##### Let's test link to FastApi !")
-    api_hello = "https://fastapi-celine-74c82ec6002a.herokuapp.com/hello"
+    api_hello = "https://fastapi-butterflies-016c4d2e232e.herokuapp.com/hello"
     
     if st.button("click to obtain hello") :
         response_hello = requests.get(api_hello)
@@ -80,7 +80,7 @@ if __name__ == '__main__':
     if submit_photos and img_file is not None:
         st.session_state = np.array([st.session_state])
         # Send the image to the API
-        api_endpoint = "https://fastapi-celine-74c82ec6002a.herokuapp.com/predict"  # Replace with your API endpoint
+        api_endpoint = "https://fastapi-butterflies-016c4d2e232e.herokuapp.com/predict"  # Replace with your API endpoint
         file = {"file": img_file}
         response = requests.post(api_endpoint, files=file)
 
