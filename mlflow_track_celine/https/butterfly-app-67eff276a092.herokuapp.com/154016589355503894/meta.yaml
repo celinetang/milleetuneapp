@@ -1,6 +1,0 @@
-artifact_location: /home/app/ https:/butterfly-app-67eff276a092.herokuapp.com/154016589355503894
-creation_time: 1687080334678
-experiment_id: '154016589355503894'
-last_update_time: 1687080334678
-lifecycle_stage: active
-name: my-first-mlflow-experiment

@@ -1,8 +1,0 @@
-digest: 017defd9
-name: dataset
-profile: '{"features_shape": [38, 4], "features_size": 152, "features_nbytes": 1216}'
-schema: '{"mlflow_tensorspec": {"features": "[{\"type\": \"tensor\", \"tensor-spec\":
-  {\"dtype\": \"float64\", \"shape\": [-1, 4]}}]", "targets": null}}'
-source: '{"tags": {"mlflow.user": "root", "mlflow.source.name": "test.py", "mlflow.source.type":
-  "LOCAL"}}'
-source_type: code
