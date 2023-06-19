@@ -47,7 +47,7 @@ async def create_upload_file(file: UploadFile):
     # contents = await file.read()
     
     # Read data 
-    img = Image.open(file)
+    img = Image.open(file.file)
     img_array = np.array(img)
     preprocessed_image = get_img_array(img_array,(299,299))
         
@@ -70,13 +70,8 @@ async def create_upload_file(file: UploadFile):
     
 #     print("Predicted class:", predicted_class)
     #Format response
-    response = {"prediction": pred_labels}
+    response = {"prediction": pred_labels.tolist()[0]}
     return response
-  
-
-
-
-
 
 
 if __name__=="__main__":
