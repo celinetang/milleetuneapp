@@ -41,7 +41,8 @@ def get_img_array(img, size):
 
 @app.get("/hello")
 async def index():
-    return "hello"
+    response = {"message":"hello"}
+    return response
 
 
 
