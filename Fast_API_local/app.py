@@ -18,7 +18,7 @@ import sys
 app = FastAPI()
 
 # Log model from mlflow 
-s3_model_path = 'model_840photo_10class_7epoch.h5'
+s3_model_path = 'model_celine_100cat_30epoch.h5'
 print('s3_model_path',s3_model_path)
 # sys.stdout.flush()
 

@@ -20,13 +20,13 @@ st.image("Zydoprion.jpg",caption="Zydodo")
 def photos_uploader(): 
     # Displays a file uploader to upload a photo of the insect
     img_file = st.file_uploader("Upload a photo of your insect:")
-    img_bytes = img_file.getvalue()
+    
     if img_file is not None:
         # Display the preview of the uploaded photo
         img = Image.open(img_file)
         st.image(img, width=50)
 
-    return img_bytes
+    return img_file
 
 
 
@@ -77,18 +77,21 @@ if __name__ == '__main__':
 
     st.markdown("##### Let's BUG it !")
     # img_file = photos_uploader()
-    img_file = photos_uploader()
 
     # submit_photos = st.button("Submit photos")
     # # if submit_photos and img_file is not None:
     # if submit_photos:
     #     st.session_state = np.array([st.session_state])
     #     # Send the image to the API
+
+    img_file = photos_uploader()
     
+
     api_call = st.button("tell me which butterfly")
     if api_call:
+    
         api_endpoint = "https://api-heroku-h5-55a38f5bd18c.herokuapp.com/predict"  # Replace with your API endpoint
-        files = {"file": img_file}
+        files = {"file": img_file.getvalue()}
         response = requests.post(api_endpoint, files=files)
 
         # Process the API response
