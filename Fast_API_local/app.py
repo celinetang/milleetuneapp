@@ -52,7 +52,7 @@ async def create_upload_file(file: UploadFile):
     # print("file",file)
     # sys.stdout.flush()
     file_bytes = await file.read()
-    print("file_bytes", file_bytes)
+    # print("file_bytes", file_bytes)
     sys.stdout.flush()
 
     #  or try to preprocess_image with contents
