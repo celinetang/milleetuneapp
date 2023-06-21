@@ -20,13 +20,13 @@ st.image("Zydoprion.jpg",caption="Zydodo")
 def photos_uploader(): 
     # Displays a file uploader to upload a photo of the insect
     img_file = st.file_uploader("Upload a photo of your insect:")
-    
+    img_bytes = img_file.getvalue()
     if img_file is not None:
         # Display the preview of the uploaded photo
         img = Image.open(img_file)
         st.image(img, width=50)
 
-    return img_file
+    return img_bytes
 
 
 
@@ -65,7 +65,7 @@ if __name__ == '__main__':
     
     
     if st.button("click to obtain hello") :
-        r = requests.get("http://localhost:4000/hello")
+        r = requests.get("https://api-heroku-h5-55a38f5bd18c.herokuapp.com/hello")
         response = r.content
         st.write(response)
         # if r.status_code == 200:
@@ -76,21 +76,27 @@ if __name__ == '__main__':
         #     st.error("Failed to say hello to the API.")
 
     st.markdown("##### Let's BUG it !")
+    # img_file = photos_uploader()
     img_file = photos_uploader()
-    submit_photos = st.button("Submit photos")
-    if submit_photos and img_file is not None:
-        st.session_state = np.array([st.session_state])
-        # Send the image to the API
-        api_endpoint = "http://localhost:4000/predict"  # Replace with your API endpoint
-        file = {"file": img_file}
-        response = requests.post(api_endpoint, files=file)
+
+    # submit_photos = st.button("Submit photos")
+    # # if submit_photos and img_file is not None:
+    # if submit_photos:
+    #     st.session_state = np.array([st.session_state])
+    #     # Send the image to the API
+    
+    api_call = st.button("tell me which butterfly")
+    if api_call:
+        api_endpoint = "https://api-heroku-h5-55a38f5bd18c.herokuapp.com/predict"  # Replace with your API endpoint
+        files = {"file": img_file}
+        response = requests.post(api_endpoint, files=files)
 
         # Process the API response
         if response.status_code == 200:
             result = response.json()
-            predictions = result["predictions"]
+            prediction = result["prediction"]
             # Do something with the predictions
-            st.write(predictions)
+            st.write(prediction)
         else:
             st.error("Failed to send the image to the API.")
 
