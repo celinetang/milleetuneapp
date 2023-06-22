@@ -14,7 +14,6 @@ RUN pip install -r /dependencies/requirements.txt
 
 COPY . /home/app
 
-
 # Document to download aws cli : https://adityagoel123.medium.com/installing-aws-cli-sam-cli-inside-docker-ef91ceb4e250
 # Download aws cli
 # RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
