@@ -205,7 +205,7 @@ if __name__ == '__main__':
                     file.write(commentaires + "\n")
                     # # https://docs.streamlit.io/knowledge-base/tutorials/databases/postgresql
                     # # Connect to the Heroku PostgreSQL database
-                    # database_url = os.environ["postgres://yrwkoeqtsqafif:dca641ba343d03114222584792d5954436b7c827ec086fbaf07814ff12565722@ec2-34-242-199-141.eu-west-1.compute.amazonaws.com:5432/dapfj9fsn6hogo"]
+                    # database_url = os.environ[""]
                     # import psycopg2
                     # conn = psycopg2.connect(database_url,sslmode='require')
                     # cursor = conn.cursor()
